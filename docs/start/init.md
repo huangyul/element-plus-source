@@ -5,5 +5,3 @@
 ```bash
 npm init vite@latest element-plus-source-code -- --template vue-ts
 ```
-
-

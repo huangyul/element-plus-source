@@ -53,3 +53,19 @@ export default defaultConfig({
 ```
 
 详细的 `vue` 组件测试教程可[参考](https://juejin.cn/post/7129667747134308389#heading-11)
+
+### prettier
+
+使用脚本命令格式化所有文件代码
+
+安装`npm i prettier -D`
+
+package.json 中添加脚本
+
+```json
+{
+  "scripts": {
+    "fotmat": "prettier --write ."
+  }
+}
+```

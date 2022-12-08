@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.7",
+    "lerna": "^6.1.0",
     "vue": "^3.2.41"
   },
   "devDependencies": {

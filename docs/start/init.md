@@ -69,3 +69,12 @@ package.json 中添加脚本
   }
 }
 ```
+
+### lerna
+
+整个element-plus是分了很多个包进行发布的，所以这里需要使用lerna进行子包的打包
+
+简单使用：
+
+1. ```yarn add learn -g```
+2. ```learn bootstrap```

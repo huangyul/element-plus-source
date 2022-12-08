@@ -34,7 +34,7 @@ npm init vite@latest element-plus-source-code -- --template vue-ts
 
 安装
 
-`yarn add vitest --dev`
+`yarn add vitest --dev` 或 `yarn add vitest -D`
 
 因为需要进行 `vue` 组件测试，所以需要可以模拟挂在 `vue` 组件，同时需要模拟 DOM
 

@@ -15,6 +15,7 @@
     "fotmat": "prettier --write ."
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "vue": "^3.2.41"
   },
   "devDependencies": {

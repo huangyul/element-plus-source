@@ -1,5 +1,7 @@
 <template>
-  <el-button>Button</el-button>
+  <router-link to="/">Home</router-link>
+  <router-link to="/button">Button</router-link>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -8,5 +10,4 @@
   }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

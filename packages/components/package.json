@@ -1,9 +1,0 @@
-{
-  "name": "@element-plus/component",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "vue": "^3.2.45"
-  }
-}

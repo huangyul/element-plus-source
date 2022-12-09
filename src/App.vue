@@ -1,8 +1,12 @@
-<script setup lang="ts">
-</script>
-
 <template>
+  <el-button>Button</el-button>
 </template>
+
+<script>
+  export default {
+    name: 'App',
+  }
+</script>
 
 <style scoped>
 </style>

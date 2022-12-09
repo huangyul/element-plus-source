@@ -1,43 +1,19 @@
 {
   "name": "element-plus-source-code",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:huangyul/element-plus-source.git",
+  "author": "huangyul <1103221645@qq.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs",
-    "cz": "git add . && czg",
-    "test": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "fotmat": "prettier --write ."
-  },
-  "dependencies": {
-    "dayjs": "^1.11.7",
-    "lerna": "^6.1.0",
-    "vue": "^3.2.41"
+    "build": "vite build"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.44.0",
-    "@vitejs/plugin-vue": "^3.2.0",
-    "@vue/test-utils": "^2.2.4",
-    "eslint": "^8.28.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.5.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-vue": "^9.8.0",
-    "happy-dom": "^7.7.0",
-    "prettier": "^2.8.0",
-    "typescript": "^4.9.3",
-    "vite": "^3.2.3",
-    "vitepress": "^1.0.0-alpha.29",
-    "vitest": "^0.25.3",
-    "vue-tsc": "^1.0.9"
+    "vite": "1.0.0-rc.1"
   },
-  "workspaces": [
-    "packages/*"
-  ]
+  "dependencies": {
+    "@vue/compiler-sfc": "3.0.0-rc.1",
+    "vue": "3.0.0-rc.1"
+  }
 }

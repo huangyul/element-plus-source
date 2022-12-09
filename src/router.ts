@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Button from './components/button/doc/index.vue'
+import Button from '@element-plus/button'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/button',

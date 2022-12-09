@@ -1,4 +1,4 @@
-import ButtonInstall from './components/button/index.ts'
+import ButtonInstall from '@element-plus/button'
 import { App } from 'vue'
 
 export const installAll = function (app: App) {

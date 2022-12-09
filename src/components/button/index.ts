@@ -1,6 +1,5 @@
 import { App } from 'vue'
 import Button from './src/button.vue'
-export const install = function (app: App) {
-  console.log(Button)
+export default function (app: App) {
   app.component(Button.name, Button)
 }

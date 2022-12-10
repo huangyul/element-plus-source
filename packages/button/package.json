@@ -4,5 +4,8 @@
   "description": "> TODO: description",
   "author": "huangyul <1103221645@qq.com>",
   "license": "MIT",
-  "main": "dist/index.js"
+  "main": "dist/index.js",
+  "peerDependencies": {
+    "vue": "^3.0.0-rc.1"
+  }
 }

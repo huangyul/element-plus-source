@@ -4,18 +4,11 @@
     "declaration": true,
     "noImplicitAny": false,
     "removeComments": true,
+    "moduleResolution": "node",
     "noLib": false,
     "target": "es6",
     "sourceMap": true,
-    "moduleResolution": "node",
-    "allowJs": true,
-    "lib": [
-      "es2020"
-    ]
+    "lib": ["es2020"]
   },
-  "exclude": [
-    "node_modules"
-  ]
- }
- 
- 
+  "exclude": ["node_modules"]
+}

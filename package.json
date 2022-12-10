@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "cz": "git add . && npx git-cz",
-    "test": "lerna run test --stream"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "26.0.7",
@@ -18,7 +18,10 @@
     "cz-conventional-changelog": "3.2.0",
     "lerna": "^3.22.1",
     "typescript": "3.9.7",
-    "vite": "1.0.0-rc.1"
+    "vite": "1.0.0-rc.1",
+    "jest": "24.1.0",
+    "ts-jest": "26.1.3",
+    "vue-jest": "^5.0.0-alpha.1"
   },
   "peerDependencies": {
     "vue": "3.0.0-rc.1",

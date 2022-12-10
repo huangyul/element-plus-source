@@ -10,18 +10,26 @@
     "dev": "vite",
     "build": "vite build",
     "cz": "git add . && npx git-cz",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook",
+    "bootstrap": "yarn && npx lerna bootstrap"
   },
   "devDependencies": {
+    "@babel/core": "7.10.5",
+    "@storybook/html": "5.3.19",
     "@types/jest": "26.0.7",
     "@vue/compiler-sfc": "3.0.0-rc.1",
+    "babel-loader": "8.1.0",
+    "babel-preset-vue": "2.0.2",
     "cz-conventional-changelog": "3.2.0",
+    "jest": "24.1.0",
     "lerna": "^3.22.1",
+    "ts-jest": "26.1.3",
+    "ts-loader": "8.0.1",
     "typescript": "3.9.7",
     "vite": "1.0.0-rc.1",
-    "jest": "24.1.0",
-    "ts-jest": "26.1.3",
-    "vue-jest": "^5.0.0-alpha.1"
+    "vue-jest": "^5.0.0-alpha.1",
+    "vue-loader": "16.0.0"
   },
   "peerDependencies": {
     "vue": "3.0.0-rc.1",

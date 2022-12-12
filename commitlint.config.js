@@ -29,7 +29,6 @@ const scopes = [
 ];
 
 module.exports = {
-  utils: { getPackages },
   rules: {
     'scope-enum': (ctx) =>
       getPackages(ctx).then((packages) => [

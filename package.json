@@ -18,6 +18,7 @@
     "@babel/core": "^7.10.5",
     "@commitlint/cli": "9.1.1",
     "@commitlint/config-conventional": "9.1.1",
+    "@storybook/addon-storysource": "5.3.19",
     "@storybook/html": "^5.3.19",
     "@types/jest": "^26.0.7",
     "@vue/compiler-sfc": "^3.0.0-rc.1",

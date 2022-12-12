@@ -2,8 +2,13 @@ name: CI
 
 on: [push, pull_request]
 
+
+
 jobs:
   build:
+    strategy:
+    matrix:
+      node-version: [12.x]
     name: Test
     runs-on: ubuntu-latest
     steps:

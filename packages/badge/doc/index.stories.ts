@@ -1,11 +1,6 @@
-import Basic from './basic.vue'
-import ElBadge from '../index'
-import ElButton from '@element-plus/button'
-
+import Basic from './basic.vue';
 export default {
-  title: "Badge",
-  component: [ElButton, ElBadge]
-}
+  title: 'Badge',
+};
 
-export const BasicUsage = () => Basic
-
+export const BasicUsage = () => Basic;

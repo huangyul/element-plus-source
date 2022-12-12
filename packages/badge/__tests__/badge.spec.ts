@@ -1,15 +1,39 @@
 import { mount } from '@vue/test-utils';
 import ElBadge from '../src/index.vue';
 
-const AXIOM = 'Beauty girl';
+const AXION = 'beauty';
 
 describe('Badge.vue', () => {
-  test('render test', () => {
+  test('has value', () => {
     const instance = mount(ElBadge, {
-      slots: {
-        default: AXIOM,
+      props: {
+        value: 80,
       },
     });
-    expect(instance.text()).toEqual(AXIOM);
+    expect(instance.vm.content).toEqual(80);
   });
+
+  test('is fixed', () => {
+    const instance = mount(ElBadge, {
+      slots: {
+        default: AXION,
+      },
+    });
+    expect(instance.find('.el-badge__content.is-fixed')).toBeDefined();
+  });
+
+  test('max', async () => {
+    const instance = mount(ElBadge, {
+      props: {
+        value: 200,
+        max: 100,
+      },
+      slots: {
+        default: AXION
+      }
+    })
+    expect(instance.vm.content).toEqual("100+")
+    await instance.setProps({value: 80})
+    expect(instance.vm.content).toEqual(80)
+  })
 });

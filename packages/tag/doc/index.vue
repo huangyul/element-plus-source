@@ -1,15 +1,16 @@
 <template>
-  <el-tag closable>默认标签</el-tag>
-  <el-tag size="medium" closable>中等标签</el-tag>
-  <el-tag size="small" closable>小型标签</el-tag>
-  <el-tag size="mini" closable>超小标签</el-tag>
+  <el-tag closable>default</el-tag>
+  <el-tag size="medium" closable>medium</el-tag>
+  <el-tag size="small" closable>small</el-tag>
+  <el-tag size="mini" closable>mini</el-tag>
   <div class="tag-group">
     <span class="tag-group__title">Dark</span>
     <el-tag
       v-for="item in items"
       :key="item.label"
       :type="item.type"
-      effect="dark">
+      effect="dark"
+    >
       {{ item.label }}
     </el-tag>
   </div>
@@ -19,7 +20,8 @@
       v-for="item in items"
       :key="item.label"
       :type="item.type"
-      effect="plain">
+      effect="plain"
+    >
       {{ item.label }}
     </el-tag>
   </div>
@@ -32,17 +34,17 @@
 </style>
 
 <script>
-  export default {
-    data() {
-      return {
-        items: [
-          { type: '', label: '标签一' },
-          { type: 'success', label: '标签二' },
-          { type: 'info', label: '标签三' },
-          { type: 'danger', label: '标签四' },
-          { type: 'warning', label: '标签五' }
-        ]
-      }
-    }
+export default {
+  data() {
+    return {
+      items: [
+        { type: '', label: 'Label 1' },
+        { type: 'success', label: 'Label 2' },
+        { type: 'info', label: 'Label 3' },
+        { type: 'danger', label: 'Label 4' },
+        { type: 'warning', label: 'Label 5' }
+      ]
+    };
   }
+};
 </script>

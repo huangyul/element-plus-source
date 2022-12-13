@@ -8,15 +8,20 @@ jobs:
   build:
     name: Test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          cmd: install --frozen-lockfile
-      - run: npx lerna bootstrap
-      - uses: borales/actions-yarn@v2.0.0
+          node-version: 16.x
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+
+      - name: Run test
+        uses: borales/actions-yarn@v4
         with:
           cmd: test

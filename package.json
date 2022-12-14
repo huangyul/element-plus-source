@@ -7,13 +7,12 @@
   "license": "MIT",
   "private": "true",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
     "cz": "git add . && npx git-cz",
     "test": "jest",
     "storybook": "start-storybook",
     "bootstrap": "yarn && npx lerna bootstrap",
-    "lint": "eslint . --ext .vue,.js,.ts"
+    "lint": "eslint . --ext .vue,.js,.ts",
+    "build": "yarn bootstrap && yarn build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

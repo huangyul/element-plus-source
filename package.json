@@ -12,7 +12,8 @@
     "cz": "git add . && npx git-cz",
     "test": "jest",
     "storybook": "start-storybook",
-    "bootstrap": "yarn && npx lerna bootstrap"
+    "bootstrap": "yarn && npx lerna bootstrap",
+    "lint": "eslint . --ext .vue,.js,.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -25,6 +26,10 @@
     "babel-loader": "^8.1.0",
     "babel-preset-vue": "^2.0.2",
     "cz-conventional-changelog": "^3.2.0",
+    "eslint": "7.5.0",
+    "eslint-plugin-vue": "^7.0.0-beta.0",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
     "husky": "4.2.5",
     "jest": "^24.1.0",
     "lerna": "^3.22.1",

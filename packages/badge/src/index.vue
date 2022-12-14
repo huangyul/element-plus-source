@@ -10,8 +10,8 @@
           'el-badge__content--' + type,
           {
             'is-fixed': $slots.default,
-            'is-dot': isDot,
-          },
+            'is-dot': isDot
+          }
         ]"
       ></sup>
     </transition>
@@ -21,14 +21,29 @@
 <script lang="ts">
 import { computed } from 'vue';
 
+interface ElBadgeProps {
+  value: string | number;
+  max: number;
+  isDot: boolean;
+  hidden: boolean;
+  type: string;
+}
+
+interface ElBadgeSetups {
+  content: string | number;
+}
+
 export default {
   name: 'ElBadge',
   props: {
     value: {
       type: [String, Number],
-      default: '',
+      default: ''
     },
-    max: Number,
+    max: {
+      type: Number,
+      default: 99
+    },
     isDot: Boolean,
     hidden: Boolean,
     type: {
@@ -37,10 +52,10 @@ export default {
         return (
           ['primary', 'success', 'warning', 'info', 'danger'].indexOf(val) > -1
         );
-      },
-    },
+      }
+    }
   },
-  setup(props) {
+  setup(props: ElBadgeProps): ElBadgeSetups {
     const content = computed(() => {
       if (props.isDot) {
         return;
@@ -52,9 +67,9 @@ export default {
       return value;
     });
     return {
-      content,
+      content
     };
-  },
+  }
 };
 </script>
 

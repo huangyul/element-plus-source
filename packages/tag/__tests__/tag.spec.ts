@@ -7,8 +7,8 @@ describe('Tag.vue', () => {
   test('render text & class', () => {
     const instance = mount(Tag, {
       slots: {
-        default: AXIOM
-      }
+        default: AXIOM,
+      },
     });
     expect(instance.text()).toEqual(AXIOM);
 
@@ -23,8 +23,8 @@ describe('Tag.vue', () => {
   test('type', () => {
     const instance = mount(Tag, {
       props: {
-        type: 'primary'
-      }
+        type: 'primary',
+      },
     });
     const vm = instance.vm;
     expect(vm.$el.classList.contains('el-tag--primary')).toEqual(true);
@@ -33,8 +33,8 @@ describe('Tag.vue', () => {
   test('hit', () => {
     const instance = mount(Tag, {
       props: {
-        hit: true
-      }
+        hit: true,
+      },
     });
     const vm = instance.vm;
     expect(vm.$el.classList.contains('is-hit')).toEqual(true);
@@ -43,8 +43,8 @@ describe('Tag.vue', () => {
   test('closeable', async () => {
     const instance = mount(Tag, {
       props: {
-        closable: true
-      }
+        closable: true,
+      },
     });
     const closeBtn = instance.find('.el-tag .el-tag__close');
     expect(closeBtn.exists()).toBe(true);
@@ -55,8 +55,8 @@ describe('Tag.vue', () => {
   test('closeTransition', () => {
     const instance = mount(Tag, {
       props: {
-        closeTransition: true
-      }
+        closeTransition: true,
+      },
     });
     const vm = instance.vm;
     expect(vm.$el.classList.contains('md-fade-center')).toEqual(false);
@@ -65,8 +65,8 @@ describe('Tag.vue', () => {
   test('color', () => {
     const instance = mount(Tag, {
       props: {
-        color: 'rgb(0, 0, 0)'
-      }
+        color: 'rgb(0, 0, 0)',
+      },
     });
     const vm = instance.vm;
     expect(vm.$el.style.backgroundColor).toEqual('rgb(0, 0, 0)');
@@ -75,8 +75,8 @@ describe('Tag.vue', () => {
   test('theme', () => {
     const instance = mount(Tag, {
       props: {
-        effect: 'dark'
-      }
+        effect: 'dark',
+      },
     });
     const vm = instance.vm;
     const el = vm.$el;

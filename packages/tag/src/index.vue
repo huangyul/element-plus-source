@@ -5,7 +5,7 @@
     :style="{ backgroundColor: color }"
     @click="handleClick"
   >
-    <slot />
+    <slot></slot>
     <i
       v-if="closable"
       class="el-tag__close el-icon-close"
@@ -18,7 +18,7 @@
       :style="{ backgroundColor: color }"
       @click="handleClick"
     >
-      <slot />
+      <slot></slot>
       <i
         v-if="closable"
         class="el-tag__close el-icon-close"
@@ -48,8 +48,8 @@ export default defineComponent({
       default: 'light',
       validator: (val: string): boolean => {
         return ['dark', 'light', 'plain'].indexOf(val) !== -1;
-      }
-    }
+      },
+    },
   },
   setup(props, ctx) {
     // computed
@@ -62,9 +62,9 @@ export default defineComponent({
       return [
         'el-tag',
         type ? `el-tag--${type}` : '',
-        tagSize ? `el-tag--${tagSize.value}` : '',
+        tagSize.value ? `el-tag--${tagSize.value}` : '',
         effect ? `el-tag--${effect}` : '',
-        hit && 'is-hit'
+        hit && 'is-hit',
       ];
     });
 
@@ -82,8 +82,8 @@ export default defineComponent({
       tagSize,
       classes,
       handleClose,
-      handleClick
+      handleClick,
     };
-  }
+  },
 });
 </script>

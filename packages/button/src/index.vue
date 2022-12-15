@@ -63,26 +63,26 @@ export default defineComponent({
   props: {
     type: {
       type: String,
-      default: 'default'
+      default: 'default',
     },
     size: {
       type: String,
-      default: ''
+      default: '',
     },
     icon: {
       type: String,
-      default: ''
+      default: '',
     },
     nativeType: {
       type: String,
-      default: 'button'
+      default: 'button',
     },
     loading: Boolean,
     disabled: Boolean,
     plain: Boolean,
     autofocus: Boolean,
     round: Boolean,
-    circle: Boolean
+    circle: Boolean,
   },
 
   emits: ['click'],
@@ -113,8 +113,8 @@ export default defineComponent({
       _elFormItemSize,
       buttonSize,
       buttonDisabled,
-      handleClick
+      handleClick,
     };
-  }
+  },
 });
 </script>

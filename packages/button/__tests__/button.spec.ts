@@ -6,16 +6,16 @@ const COMMON_CONFIG = {
   global: {
     provide: {
       elForm: {},
-      elFormItem: {}
-    }
-  }
+      elFormItem: {},
+    },
+  },
 };
 
 describe('Button.vue', () => {
   it('create', () => {
     const instance = mount(Button, {
       props: { type: 'primary' },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.classList.contains('el-button--primary')).toBeTruthy();
@@ -24,7 +24,7 @@ describe('Button.vue', () => {
   it('icon', () => {
     const instance = mount(Button, {
       props: { icon: 'el-icon-search' },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.querySelector('.el-icon-search')).not.toBeUndefined();
@@ -32,7 +32,7 @@ describe('Button.vue', () => {
   it('nativeType', () => {
     const instance = mount(Button, {
       props: { nativeType: 'submit' },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.getAttribute('type')).toBe('submit');
@@ -40,7 +40,7 @@ describe('Button.vue', () => {
   it('loading', () => {
     const instance = mount(Button, {
       props: { loading: true },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.querySelector('.el-icon-search')).not.toBeUndefined();
@@ -50,7 +50,7 @@ describe('Button.vue', () => {
   it('disabled', async () => {
     const instance = mount(Button, {
       props: { disabled: true },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.classList.contains('is-disabled')).toBeTruthy();
@@ -60,7 +60,7 @@ describe('Button.vue', () => {
   it('size', () => {
     const instance = mount(Button, {
       props: { size: 'medium' },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.classList.contains('el-button--medium')).toBeTruthy();
@@ -68,7 +68,7 @@ describe('Button.vue', () => {
   it('plain', () => {
     const instance = mount(Button, {
       props: { plain: true },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.classList.contains('is-plain')).toBeTruthy();
@@ -76,7 +76,7 @@ describe('Button.vue', () => {
   it('round', () => {
     const instance = mount(Button, {
       props: { round: true },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.classList.contains('is-round')).toBeTruthy();
@@ -84,7 +84,7 @@ describe('Button.vue', () => {
   it('circle', () => {
     const instance = mount(Button, {
       props: { circle: true },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     const buttonElm = instance.element;
     expect(buttonElm.classList.contains('is-circle')).toBeTruthy();
@@ -93,9 +93,9 @@ describe('Button.vue', () => {
   test('render text', () => {
     const instance = mount(Button, {
       slots: {
-        default: AXIOM
+        default: AXIOM,
       },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     expect(instance.text()).toEqual(AXIOM);
   });
@@ -103,9 +103,9 @@ describe('Button.vue', () => {
   test('handle click', async () => {
     const instance = mount(Button, {
       slots: {
-        default: AXIOM
+        default: AXIOM,
       },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     await instance.trigger('click');
     expect(instance.emitted()).toBeDefined();
@@ -114,9 +114,9 @@ describe('Button.vue', () => {
   test('handle click inside', async () => {
     const instance = mount(Button, {
       slots: {
-        default: '<span class="inner-slot"></span>'
+        default: '<span class="inner-slot"></span>',
       },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     await (<HTMLElement>instance.element.querySelector('.inner-slot')).click();
     expect(instance.emitted()).toBeDefined();
@@ -125,10 +125,10 @@ describe('Button.vue', () => {
   test('loading implies disabled', async () => {
     const instance = mount(Button, {
       slots: {
-        default: AXIOM
+        default: AXIOM,
       },
       props: { loading: true },
-      ...COMMON_CONFIG
+      ...COMMON_CONFIG,
     });
     await instance.trigger('click');
     expect(instance.emitted('click')).toBeUndefined();

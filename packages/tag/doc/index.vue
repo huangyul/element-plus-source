@@ -43,9 +43,9 @@ export default defineComponent({
         { type: 'success', label: 'Label 2' },
         { type: 'info', label: 'Label 3' },
         { type: 'danger', label: 'Label 4' },
-        { type: 'warning', label: 'Label 5' }
-      ]
+        { type: 'warning', label: 'Label 5' },
+      ],
     };
-  }
+  },
 });
 </script>

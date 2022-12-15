@@ -2,16 +2,16 @@ module.exports = {
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   plugins: ['@typescript-eslint'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'plugin:vue/vue3-recommended'
+    'plugin:vue/vue3-recommended',
   ],
   rules: {
     // js/ts
@@ -22,10 +22,10 @@ module.exports = {
     quotes: [
       'error',
       'single',
-      { avoidEscape: true, allowTemplateLiterals: true }
+      { avoidEscape: true, allowTemplateLiterals: true },
     ],
     camelcase: ['error', { properties: 'never' }],
-    semi: ['error', 'never'],
+    // semi: ['error', 'never'],
     indent: ['error', 2, { SwitchCase: 1 }],
     'object-curly-spacing': ['error', 'always'],
     // vue
@@ -36,17 +36,17 @@ module.exports = {
         html: {
           void: 'never',
           normal: 'never',
-          component: 'always'
-        }
-      }
+          component: 'always',
+        },
+      },
     ],
     'vue/max-attributes-per-line': [
       'error',
       {
         singleline: 3,
-        multiline: 1
-      }
+        multiline: 1,
+      },
     ],
-    'vue/html-closing-bracket-spacing': 'error'
-  }
+    'vue/html-closing-bracket-spacing': 'error',
+  },
 };

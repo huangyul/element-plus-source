@@ -19,7 +19,7 @@ describe('Badge.vue', () => {
         default: AXION,
       },
     });
-    expect(instance.find('.el-badge__content.is-fixed')).toBeDefined();
+    expect(instance.find('.el-badge__content.is-fixed').exists()).toBe(true);
   });
 
   test('max', async () => {
@@ -29,11 +29,11 @@ describe('Badge.vue', () => {
         max: 100,
       },
       slots: {
-        default: AXION
-      }
+        default: AXION,
+      },
     })
-    expect(instance.vm.content).toEqual("100+")
-    await instance.setProps({value: 80})
+    expect(instance.vm.content).toEqual('100+')
+    await instance.setProps({ value: 80 })
     expect(instance.vm.content).toEqual(80)
   })
 });

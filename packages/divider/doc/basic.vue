@@ -13,15 +13,20 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'Basic',
-  methods: {
-    handleClick() {
-      alert('click')
-    },
+  setup(props, ctx) {
+    const handleClick = () => {
+      alert('click');
+    };
+    return {
+      handleClick,
+    };
   },
-}
+});
 </script>
 
 <style scoped>

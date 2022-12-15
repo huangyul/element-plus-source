@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-bind="$attrs"
-    :class="['el-divider', `el-divider--${direction}`]"
-  >
+  <div v-bind="$attrs" :class="['el-divider', `el-divider--${direction}`]">
     <div
       v-if="$slots.default && direction !== 'vertical'"
       :class="['el-divider__text', `is-${contentPosition}`]"
@@ -13,23 +10,24 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+export default defineComponent({
   name: 'ElDivider',
   props: {
     direction: {
       type: String,
       default: 'horizontal',
       validator(val: string): boolean {
-        return ['horizontal', 'vertical'].indexOf(val) !== -1
+        return ['horizontal', 'vertical'].indexOf(val) !== -1;
       },
     },
     contentPosition: {
       type: String,
       default: 'center',
       validator(val: string): boolean {
-        return ['left', 'center', 'right'].indexOf(val) !== -1
+        return ['left', 'center', 'right'].indexOf(val) !== -1;
       },
     },
   },
-}
+});
 </script>

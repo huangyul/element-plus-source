@@ -1,19 +1,14 @@
 import isServer from './isServer'
 
-let scorllBarWidth: number
+let scrollBarWidth: number
 
-/**
- * 计算滚动条的宽度
- * @returns 滚动条的宽度
- */
 export default function(): number {
   if (isServer) return 0
-  if (scorllBarWidth !== undefined) {
-    return scorllBarWidth
-  }
+  if (scrollBarWidth !== undefined) return scrollBarWidth
 
   const outer = document.createElement('div')
   outer.className = 'el-scrollbar__wrap'
+  outer.style.visibility = 'hidden'
   outer.style.width = '100px'
   outer.style.position = 'absolute'
   outer.style.top = '-9999px'
@@ -28,7 +23,7 @@ export default function(): number {
 
   const widthWithScroll = inner.offsetWidth
   outer.parentNode.removeChild(outer)
-  scorllBarWidth = widthNoScroll - widthWithScroll
+  scrollBarWidth = widthNoScroll - widthWithScroll
 
-  return scorllBarWidth
+  return scrollBarWidth
 }

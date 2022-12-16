@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 interface ElBadgeProps {
   value: string | number;
@@ -51,26 +51,26 @@ export default {
       validator(val) {
         return (
           ['primary', 'success', 'warning', 'info', 'danger'].indexOf(val) > -1
-        );
+        )
       },
     },
   },
   setup(props: ElBadgeProps): ElBadgeSetups {
     const content = computed(() => {
       if (props.isDot) {
-        return;
+        return
       }
-      const { value, max } = props;
+      const { value, max } = props
       if (typeof value === 'number' && typeof max === 'number') {
-        return max < value ? `${max}+` : value;
+        return max < value ? `${max}+` : value
       }
-      return value;
-    });
+      return value
+    })
     return {
       content,
-    };
+    }
   },
-};
+}
 </script>
 
 <style scoped></style>

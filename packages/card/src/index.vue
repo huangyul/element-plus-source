@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="my-card"
-    :class="`my-card-shadow-${shadow}`"
-  >
+  <div class="my-card" :class="`my-card-shadow-${shadow}`">
     <div v-if="$slots.header || header" class="my-card-header">
       <slot name="header">{{ header }}</slot>
     </div>
@@ -13,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'ElCard',
@@ -25,18 +22,18 @@ export default defineComponent({
     bodyStyle: {
       type: Object,
       default() {
-        return {};
+        return {}
       },
     },
     shadow: {
       type: String,
       default: 'always',
       validator(val: string) {
-        return ['always', 'hover', 'never'].includes(val);
+        return ['always', 'hover', 'never'].includes(val)
       },
     },
   },
-});
+})
 </script>
 
 <style scoped>

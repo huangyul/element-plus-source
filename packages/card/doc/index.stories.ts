@@ -1,3 +1,3 @@
-export { default as BasicUsage } from './basic.vue';
+export { default as BasicUsage } from './basic.vue'
 
-export default { title: 'Card' };
+export default { title: 'Card' }

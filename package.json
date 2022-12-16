@@ -11,7 +11,7 @@
     "test": "jest",
     "storybook": "start-storybook",
     "bootstrap": "yarn && npx lerna bootstrap",
-    "lint": "eslint ./packages --ext .vue,.js,.ts",
+    "lint": "eslint ./packages --ext .vue,.js,.ts --fix",
     "build": "yarn bootstrap && yarn build-storybook"
   },
   "devDependencies": {

@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'ElDivider',
   props: {
@@ -18,16 +18,16 @@ export default defineComponent({
       type: String,
       default: 'horizontal',
       validator(val: string): boolean {
-        return ['horizontal', 'vertical'].indexOf(val) !== -1;
+        return ['horizontal', 'vertical'].indexOf(val) !== -1
       },
     },
     contentPosition: {
       type: String,
       default: 'center',
       validator(val: string): boolean {
-        return ['left', 'center', 'right'].indexOf(val) !== -1;
+        return ['left', 'center', 'right'].indexOf(val) !== -1
       },
     },
   },
-});
+})
 </script>

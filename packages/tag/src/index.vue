@@ -29,10 +29,10 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue'
 const ELEMENT: {
   size?: number;
-} = {};
+} = {}
 
 export default defineComponent({
   name: 'ElTag',
@@ -47,7 +47,7 @@ export default defineComponent({
       type: String,
       default: 'light',
       validator: (val: string): boolean => {
-        return ['dark', 'light', 'plain'].indexOf(val) !== -1;
+        return ['dark', 'light', 'plain'].indexOf(val) !== -1
       },
     },
   },
@@ -55,35 +55,35 @@ export default defineComponent({
     // computed
     const tagSize = computed(() => {
       // todo ctx.$ELEMENT
-      return props.size || (ELEMENT || {}).size;
-    });
+      return props.size || (ELEMENT || {}).size
+    })
     const classes = computed(() => {
-      const { type, hit, effect } = props;
+      const { type, hit, effect } = props
       return [
         'el-tag',
         type ? `el-tag--${type}` : '',
         tagSize.value ? `el-tag--${tagSize.value}` : '',
         effect ? `el-tag--${effect}` : '',
         hit && 'is-hit',
-      ];
-    });
+      ]
+    })
 
     // methods
     const handleClose = event => {
-      event.stopPropagation();
-      ctx.emit('close', event);
-    };
+      event.stopPropagation()
+      ctx.emit('close', event)
+    }
 
     const handleClick = event => {
-      ctx.emit('close', event);
-    };
+      ctx.emit('close', event)
+    }
 
     return {
       tagSize,
       classes,
       handleClose,
       handleClick,
-    };
+    }
   },
-});
+})
 </script>

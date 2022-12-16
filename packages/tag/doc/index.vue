@@ -34,7 +34,7 @@
 </style>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 export default defineComponent({
   data() {
     return {
@@ -45,7 +45,7 @@ export default defineComponent({
         { type: 'danger', label: 'Label 4' },
         { type: 'warning', label: 'Label 5' },
       ],
-    };
+    }
   },
-});
+})
 </script>

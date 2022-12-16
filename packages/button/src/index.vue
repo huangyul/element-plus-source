@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, inject } from 'vue';
+import { computed, defineComponent, inject } from 'vue'
 
 interface ElButtonProps {
   type: string;
@@ -48,7 +48,7 @@ interface ElButtonSetups {
 
 const ELEMENT: {
   size?: number;
-} = {};
+} = {}
 // TODOS: replace these interface definition with actual ElForm interface
 interface ElForm {
   disabled: boolean;
@@ -89,32 +89,32 @@ export default defineComponent({
 
   setup(props: ElButtonProps, ctx): ElButtonSetups {
     // inject
-    const elForm = inject<ElForm>('elForm');
-    const elFormItem = inject<ElFormItem>('elFormItem');
+    const elForm = inject<ElForm>('elForm')
+    const elFormItem = inject<ElFormItem>('elFormItem')
 
     // computed
     const _elFormItemSize = computed(() => {
-      return (elFormItem || {}).elFormItemSize;
-    });
+      return (elFormItem || {}).elFormItemSize
+    })
     const buttonSize = computed(() => {
       // todo ELEMENT
-      return props.size || _elFormItemSize.value || (ELEMENT || {}).size;
-    });
+      return props.size || _elFormItemSize.value || (ELEMENT || {}).size
+    })
     const buttonDisabled = computed(() => {
-      return props.disabled || (elForm || {}).disabled;
-    });
+      return props.disabled || (elForm || {}).disabled
+    })
 
     //methods
     const handleClick = evt => {
-      ctx.emit('click', evt);
-    };
+      ctx.emit('click', evt)
+    }
 
     return {
       _elFormItemSize,
       buttonSize,
       buttonDisabled,
       handleClick,
-    };
+    }
   },
-});
+})
 </script>

@@ -25,7 +25,7 @@ module.exports = {
       { avoidEscape: true, allowTemplateLiterals: true },
     ],
     camelcase: ['error', { properties: 'never' }],
-    // semi: ['error', 'never'],
+    semi: ['error', 'never'],
     indent: ['error', 2, { SwitchCase: 1 }],
     'object-curly-spacing': ['error', 'always'],
     // vue
@@ -49,4 +49,4 @@ module.exports = {
     ],
     'vue/html-closing-bracket-spacing': 'error',
   },
-};
+}

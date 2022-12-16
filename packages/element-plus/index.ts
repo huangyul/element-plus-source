@@ -3,6 +3,7 @@ import ElBadge from '@element-plus/badge'
 import ElTag from '@element-plus/tag'
 import ElDivider from '@element-plus/divider'
 import ElCard from '@element-plus/card'
+import ElTimeline from '@element-plus/time-line'
 import { App } from 'vue'
 
 export { ElButton, ElBadge, ElTag, ElDivider, ElCard }
@@ -13,4 +14,5 @@ export default function(app: App): void {
   ElTag(app)
   ElDivider(app)
   ElCard(app)
+  ElTimeline(app)
 }

@@ -1,0 +1,15 @@
+{
+  "name": "@element-plus/time-line",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "huangyul <1103221645@qq.com>",
+  "homepage": "https://github.com/huangyul/element-plus-source#readme",
+  "license": "ISC",
+  "main": "lib/time-line.js",
+  "devDependencies": {
+    "@vue/test-utils": "^2.0.0-beta.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0-rc.1"
+  }
+}
